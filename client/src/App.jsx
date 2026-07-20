@@ -3,7 +3,6 @@ import Home from "./pages/Home";
 function App() {
   return (
     <>
-      {/* <h1>Healthcare Appointment System</h1> */}
       <Home/>
     </>
   );
