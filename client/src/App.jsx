@@ -1,10 +1,15 @@
+import { Routes, Route } from "react-router-dom";
+
 import Home from "./pages/Home";
+import ChooseRole from "./pages/ChooseRole";
 
 function App() {
   return (
-    <>
-      <Home/>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+
+      <Route path="/choose-role" element={<ChooseRole />} />
+    </Routes>
   );
 }
 
