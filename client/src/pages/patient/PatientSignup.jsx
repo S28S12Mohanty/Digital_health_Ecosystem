@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function PatientSignup() {
@@ -34,26 +35,52 @@ function PatientSignup() {
     },
   ];
 
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    password: "",
+    confirmPassword: "",
+  });
+
+  const [error, setError] = useState("");
+  const handlechange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setError("");
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (formData.password !== formData.confirmPassword) {
+      setError("Password and Confirm Password do not match.");
+      return;
+    }
+    console.log("Form submitted:", formData);
+  };
+  
+
   return (
     <section className="signup-container">
       <div className="signup-box">
         <h2>Patient Sign Up</h2>
 
-        <p className="signup-text">
-          Create your account to book appointments.
-        </p>
+        <p className="signup-text">Create your account to book appointments.</p>
 
-        <form className="signup-form">
+        <form className="signup-form" onSubmit={handleSubmit}>
           {formFields.map((field) => (
             <input
               key={field.id}
               type={field.type}
               name={field.name}
               placeholder={field.placeholder}
+              value={formData[field.name]}
+              onChange={handlechange}
               required
             />
           ))}
 
+           {error && <p className="error-message">{error}</p>}
           <button type="submit" className="signup-btn">
             Create Account
           </button>
