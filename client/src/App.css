@@ -228,20 +228,130 @@ body {
 .close-btn {
   width: 100%;
   padding: 12px;
-
   border: none;
   border-radius: 10px;
-
   background: #dc3e4e;
   color: white;
-
   font-size: 16px;
   font-weight: 600;
-
   cursor: pointer;
   transition: 0.3s;
 }
 
 .close-btn:hover {
   background: #b92f3e;
+}
+
+
+
+
+/* patient Login Page */
+
+.login-container ,
+.signup-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8fafc;
+}
+
+/* Login Card */
+
+.login-box ,
+.signup-box {
+  width: 420px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+/* Heading */
+
+.login-box h2 ,
+.signup-box h2 {
+  font-size: 32px;
+  color: #dc3e4e;
+  margin-bottom: 10px;
+}
+
+.login-text ,
+.signup-text {
+  color: #6b7280;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+/* Form */
+
+.login-form ,
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Inputs */
+
+.login-form input ,
+.signup-form input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.login-form input:focus ,
+.signup-form input:focus {
+  border-color: #dc3e4e;
+  box-shadow: 0 0 0 3px rgba(220, 62, 78, 0.15);
+}
+
+/* Login Button */
+
+.login-btn ,
+.signup-btn {
+  margin-top: 8px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #dc3e4e;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover ,
+.signup-btn:hover {
+  background: #b92f3e;
+}
+
+/* Bottom Text */
+
+.bottom-text {
+  margin-top: 25px;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+/* Sign Up Link */
+
+.signup-link ,
+.login-link{
+  color: #dc3e4e;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
 }
