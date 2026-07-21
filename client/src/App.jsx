@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
-import ChooseRole from "./pages/ChooseRole";
+import ChooseRole from "./components/ChooseRole";
 
 function App() {
   return (

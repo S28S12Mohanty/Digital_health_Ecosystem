@@ -1,7 +1,7 @@
 import { PiHeartbeatLight } from "react-icons/pi";
 import { useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ setShowPopup }) => {
   const navigate = useNavigate();
 
   const navContent = {
@@ -16,7 +16,7 @@ const Navbar = () => {
           <span>{navContent.logo}</span>
         </div>
 
-        <button className="signin-btn" onClick={() => navigate("/choose-role")}>
+        <button className="signin-btn"  onClick={() => setShowPopup(true)}>
           Sign In
         </button>
       </div>

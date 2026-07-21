@@ -1,18 +1,16 @@
 import "../App.css";
+import { useState } from "react";
 import Navbar from "../components/Navbar";
-import Hero from "../components/Hero"; 
-
+import Hero from "../components/Hero";
+import ChooseRole from "../components/ChooseRole";
 
 function Home() {
-    
+  const [showPopup, setShowPopup] = useState(false);
   return (
     <>
-    <Navbar/>
-    <Hero/>
-    <div className="container">
-      <h1>Digital Health Ecosystem</h1>
-      <p>Find the Best Doctor Near You</p>
-    </div>
+      <Navbar setShowPopup={setShowPopup} />
+      <Hero />
+      {showPopup && <ChooseRole setShowPopup={setShowPopup} />}
     </>
   );
 }
